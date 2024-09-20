@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Scene xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <root>
+      <VBox>
+         <children>
+            <AnchorPane prefHeight="46.0">
+               <children>
+                  <Pane layoutX="406.79998779296875" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                     <Button fx:id="homeBtn" layoutY="11.0" mnemonicParsing="false" text="Home" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                     <Label fx:id="medicLabel" layoutY="14.0" prefHeight="18.0" prefWidth="133.0" text="Dr. Mario Rossi" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                   <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+                       <children>
+                           <Label text="Terapie">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                           <Pane prefHeight="418.0" prefWidth="600.0">
+                               <children>
+                                   <VBox fx:id="containerForm" alignment="CENTER" layoutX="144.0" layoutY="13.0" prefHeight="385.0" prefWidth="313.0" style="-fx-background-color: rgba(0, 0, 0, .15);">
+                                       <children>
+                                           <Pane prefHeight="32.0" prefWidth="314.0">
+                                               <children>
+                                                   <Label fx:id="patientLabel" layoutX="84.0" layoutY="6.0" text="Paziente Mario Rossi">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font></Label>
+                                               </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" top="5.0" />
+                                       </VBox.margin>
+                                           </Pane>
+                                           <Pane prefHeight="50.0">
+                                               <children>
+                                                   <Label layoutX="118.0" layoutY="2.0" text="Seleziona Terapia" textAlignment="CENTER">
+                                                       <font>
+                                                           <Font size="10.0" />
+                                                       </font></Label>
+                                                   <ChoiceBox fx:id="selectorTherapy" layoutX="74.0" layoutY="18.0" prefHeight="25.0" prefWidth="165.0" />
+                                               </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                           </Pane>
+                                           <Pane prefHeight="50.0">
+                                               <children>
+                                                   <Label layoutX="65.0" text="Nome Farmaco" />
+                                                   <TextField fx:id="drugField" layoutX="54.0" layoutY="18.0" prefHeight="25.0" prefWidth="205.0" />
+                                               </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                           </Pane>
+                                           <Pane layoutX="10.0" layoutY="144.0" prefHeight="50.0">
+                                               <children>
+                                                   <Label layoutX="65.0" text="Assunzioni Giornaliere" />
+                                                   <TextField fx:id="dailyQtyField" layoutX="54.0" layoutY="18.0" prefHeight="25.0" prefWidth="205.0" />
+                                               </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                           </Pane>
+                                           <Pane layoutX="10.0" layoutY="176.0" prefHeight="50.0">
+                                               <children>
+                                                   <Label layoutX="65.0" text="Quantità per Assunzione" />
+                                                   <TextField fx:id="qtyField" layoutX="54.0" layoutY="18.0" prefHeight="25.0" prefWidth="182.0" />
+                                          <Label layoutX="241.0" layoutY="24.0" text="mg" />
+                                               </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                           </Pane>
+                                           <Pane layoutX="10.0" layoutY="196.0" prefHeight="50.0" prefWidth="314.0">
+                                               <children>
+                                                   <Label layoutX="65.0" text="Indicazioni" />
+                                                   <TextField fx:id="indicationField" layoutX="54.0" layoutY="18.0" prefHeight="25.0" prefWidth="205.0" />
+                                                   <Label layoutX="125.0" layoutY="3.0" opacity="0.7" text="(opzionale)">
+                                                       <font>
+                                                           <Font size="9.0" />
+                                                       </font>
+                                                   </Label>
+                                               </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                           </Pane>
+                                    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="deleteBtn" disable="true" mnemonicParsing="false" text="Rimuovere">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="confirmBtn" mnemonicParsing="false">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin></Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                       </children></VBox>
+                               </children>
+                           </Pane>
+                       </children>
+                   </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+    </root>
+</Scene>

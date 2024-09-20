@@ -1,0 +1,15 @@
+(
+    patient_id        INTEGER not null
+        constraint patient_id
+            primary key autoincrement,
+    medic_id        integer not null
+        constraint medic_id
+            references medic,
+    email             TEXT    not null,
+    name              TEXT    not null,
+    surname           TEXT    not null,
+    password          TEXT    not null,
+    risk_factors      TEXT    not null,
+    previous_diseases TEXT    not null,
+    comorbidity TEXT not null DEFAULT '[]'
+)

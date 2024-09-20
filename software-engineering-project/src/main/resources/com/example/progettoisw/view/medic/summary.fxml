@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Scene xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <root>
+        <VBox alignment="TOP_CENTER" prefHeight="631.0" prefWidth="810.0">
+            <children>
+                <AnchorPane prefHeight="46.0">
+                    <children>
+                        <Pane layoutX="406.79998779296875" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="homeBtn" layoutY="11.0" mnemonicParsing="false" text="🡸" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="medicLabel" layoutY="14.0" prefHeight="18.0" prefWidth="133.0" text="Dr. Mario Rossi" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <VBox alignment="CENTER" prefHeight="585.0" prefWidth="810.0">
+                    <children>
+                        <Label text="Riepilogo Pressione Arteriosa Paziente" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="patientLabel" text="[Nome Cognome]" />
+                  <LineChart fx:id="summaryChart" prefWidth="682.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                     <VBox.margin>
+                        <Insets left="20.0" right="30.0" />
+                     </VBox.margin>
+                  </LineChart>
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="810.0" spacing="30.0">
+                     <children>
+                        <Button fx:id="prevBtn" mnemonicParsing="false" text="&lt;" />
+                        <Label fx:id="periodLabel" text="[tipo] dal [data] al [data]" />
+                        <Button fx:id="nextBtn" mnemonicParsing="false" text="&gt;" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </root>
+</Scene>

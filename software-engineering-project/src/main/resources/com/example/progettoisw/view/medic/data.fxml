@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Scene xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <root>
+        <VBox prefHeight="631.0" prefWidth="810.0">
+            <children>
+                <AnchorPane prefHeight="46.0">
+                    <children>
+                        <Pane layoutX="406.79998779296875" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="homeBtn" layoutY="11.0" mnemonicParsing="false" text="Home" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="medicLabel" layoutY="14.0" prefHeight="18.0" prefWidth="133.0" text="Dr. Mario Rossi" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <VBox alignment="CENTER" prefHeight="585.0" prefWidth="810.0">
+                    <children>
+                        <Label text="Consulta Dati Paziente" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="patientLabel" text="[Nome Cognome]" />
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                              <VBox>
+                                  <children>
+                                      <Label text="Fattori di rischio">
+                                          <VBox.margin>
+                                              <Insets bottom="5.0" left="10.0" />
+                                          </VBox.margin>
+                                      </Label>
+                                      <ListView fx:id="riskFactorsView" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="400.0" />
+                                  </children>
+                              </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="Diario pressione arteriosa">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TableView fx:id="bloodPressureTable" prefHeight="200.0" prefWidth="400.0" />
+                              <HBox alignment="CENTER" prefWidth="375.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="summaryWeeklyBtn" maxWidth="100.0" minHeight="45.0" mnemonicParsing="false" text="Riepilogo settimanale" textAlignment="CENTER" wrapText="true" />
+                                    <Button fx:id="summaryMonthlyBtn" layoutX="10.0" layoutY="10.0" maxWidth="100.0" minHeight="45.0" mnemonicParsing="false" text="Riepilogo mensile" textAlignment="CENTER" wrapText="true" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                     <children>
+                              <VBox>
+                                  <children>
+                                      <Label text="Patologie pregresse">
+                                          <VBox.margin>
+                                              <Insets bottom="5.0" left="10.0" />
+                                          </VBox.margin>
+                                      </Label>
+                                      <ListView fx:id="previousDiseasesView" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="400.0" />
+                                  </children>
+                              </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="Diario assunzione terapie">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TableView fx:id="therapyTable" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="400.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                     <children>
+                              <VBox>
+                                  <children>
+                                      <Label text="Comorbidità presenti">
+                                          <VBox.margin>
+                                              <Insets bottom="5.0" left="10.0" />
+                                          </VBox.margin>
+                                      </Label>
+                                      <ListView fx:id="comorbidityView" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="400.0" />
+                                  </children>
+                              </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="Diario sintomi">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TableView fx:id="symptomTable" prefHeight="200.0" prefWidth="400.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                    </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+                </VBox>
+            </children>
+        </VBox>
+    </root>
+</Scene>

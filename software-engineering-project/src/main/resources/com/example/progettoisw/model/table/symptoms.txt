@@ -1,0 +1,14 @@
+(
+    symptom_id integer not null
+        constraint symptom_id
+            primary key autoincrement,
+    patient_id integer not null
+        constraint patient_id
+            references patient,
+    ds_id      integer not null
+        constraint ds_id
+            references daily_surveys,
+    from_date  integer not null,
+    to_date    integer not null,
+    description TEXT
+)

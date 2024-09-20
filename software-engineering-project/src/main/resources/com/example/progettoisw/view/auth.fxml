@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Scene xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <StackPane alignment="TOP_LEFT">
+      <children>
+            <VBox style="-fx-alignment: center;">
+                <children>
+                    <Label fx:id="title" alignment="CENTER" prefHeight="26.0" prefWidth="354.0" text="Stai effettuando il login come">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Label>
+                      <VBox style="-fx-alignment: center;">
+                          <children>
+                     <Group>
+                        <VBox.margin>
+                           <Insets bottom="20.0" />
+                        </VBox.margin>
+                        <children>
+                                      <Label prefHeight="18.0" prefWidth="324.0" text="Email">
+                                          <padding>
+                                              <Insets left="10.0" />
+                                          </padding>
+                                      </Label>
+                                      <TextField fx:id="emailField" layoutY="25.0" prefHeight="25.0" prefWidth="323.0" />
+                        </children>
+                     </Group>
+                     <Group>
+                        <children>
+                                      <Label prefHeight="17.0" prefWidth="325.0" text="Password">
+                                          <padding>
+                                              <Insets left="10.0" />
+                                          </padding>
+                                      </Label>
+                                      <PasswordField fx:id="passwordField" layoutY="25.0" prefHeight="26.0" prefWidth="324.0" />
+                        </children>
+                     </Group>
+                          </children>
+                  <VBox.margin>
+                     <Insets bottom="50.0" top="50.0" />
+                  </VBox.margin>
+                      </VBox>
+               <Label fx:id="messageLabel" textAlignment="CENTER" textFill="#f75151">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </Label>
+                    <Button fx:id="loginBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="102.0" text="Login" />
+                </children>
+            </VBox>
+         <Button fx:id="backBtn" mnemonicParsing="false" text="🡸" textFill="#515151">
+            <StackPane.margin>
+               <Insets left="20.0" top="20.0" />
+            </StackPane.margin>
+         </Button>
+      </children>
+   </StackPane>
+</Scene>

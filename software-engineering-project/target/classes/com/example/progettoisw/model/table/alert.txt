@@ -1,0 +1,16 @@
+(
+    alert_id     integer not null
+        constraint alert_id
+            primary key autoincrement,
+    medic_id     integer not null
+        constraint medic_id
+            references medic,
+    patient_id   integer not null
+        constraint patient_id
+            references patient,
+    description  text    not null,
+    medic_read   integer not null,
+    patient_read integer not null,
+    alert_type integer not null,
+    date integer not null
+)

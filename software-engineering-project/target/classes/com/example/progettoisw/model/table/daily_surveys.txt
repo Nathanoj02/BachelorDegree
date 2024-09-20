@@ -1,0 +1,13 @@
+(
+    ds_id    INTEGER not null
+        constraint ds_id
+            primary key autoincrement,
+    patient_id INTEGER not null
+        constraint patient_id
+            references patient,
+    sbp      INT     not null,
+    dbp      INT     not null,
+    tk_ids   TEXT    not null,
+    symptom_ids TEXT not null,
+    date     INTEGER not null
+)

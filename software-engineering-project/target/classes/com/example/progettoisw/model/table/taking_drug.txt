@@ -1,0 +1,14 @@
+(
+    tk_id      integer not null
+        constraint tk_id
+            primary key autoincrement,
+    ds_id      integer not null
+        constraint ds_id
+            references daily_surveys,
+    patient_id integer not null
+        constraint patient_id
+            references patient,
+    drug       TEXT    not null,
+    date       INTEGER not null,
+    qty        REAL    not null
+)

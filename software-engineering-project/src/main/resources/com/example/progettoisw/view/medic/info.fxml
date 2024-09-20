@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Scene xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <root>
+        <VBox prefHeight="631.0" prefWidth="810.0">
+            <children>
+                <AnchorPane prefHeight="46.0">
+                    <children>
+                        <Pane layoutX="406.79998779296875" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="homeBtn" layoutY="11.0" mnemonicParsing="false" text="Home" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label fx:id="medicLabel" layoutY="14.0" prefHeight="18.0" prefWidth="133.0" text="Dr. Mario Rossi" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            <VBox alignment="CENTER" prefHeight="585.0" prefWidth="810.0">
+               <children>
+                  <Label text="Aggiorna Informazioni Paziente" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="patientLabel" text="[Nome Cognome]" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Fattori di rischio">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="riskFactorsView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="57.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Patologie pregresse">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="previousDiseasesView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="139.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Comorbidità presenti">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="comorbidityView" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <Button fx:id="confirmButton" mnemonicParsing="false" text="Conferma">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            </children>
+        </VBox>
+    </root>
+</Scene>

@@ -1,0 +1,15 @@
+(
+    therapy_id      integer not null
+        constraint therapy_id
+            primary key autoincrement,
+    patient_id      integer not null
+        constraint patient_id
+            references patient,
+    medic_id        integer not null
+        constraint medic_id
+            references medic,
+    drug            TEXT    not null,
+    daily_intake    INT     not null,
+    qty_intake_drug REAL    not null,
+    indications     TEXT
+)

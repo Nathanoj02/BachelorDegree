@@ -1,0 +1,9 @@
+(
+    medic_id integer not null
+        constraint medic_id
+            primary key autoincrement,
+    name     TEXT    not null,
+    surname  TEXT    not null,
+    email    TEXT    not null,
+    password TEXT    not null
+)

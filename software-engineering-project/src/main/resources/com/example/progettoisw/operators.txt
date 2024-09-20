@@ -1,0 +1,2 @@
+admin@gmail.com,pass1
+operator2@gmail.com,pass2
