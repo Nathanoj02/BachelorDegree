@@ -1,0 +1,12 @@
+# Registro a 1 bit
+.model REGISTRO
+
+.inputs I	# I variabile in entrata (da tenere in memoria)
+.outputs O	# O variabile in uscita
+
+# Formato da 1 latch
+.latch I O re NIL 0
+# I = input (del latch), O = output (del latch), "re" = tipo del latch (rising edge),
+# NIL = utilizza il clock generale del circuito in cui è inserito, 0 = stato iniziale del latch
+
+.end

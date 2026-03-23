@@ -1,0 +1,22 @@
+# Sommatore a 1 bit
+.model SOMMATORE
+
+.inputs A B CIN	# A, B sono 2 numeri, CIN carry in (riporto in entrata, che viene sommato)
+.outputs O COUT	# O è il risultato, COUT carry out (riporto in uscita)
+
+# Esegue l'operazione A + B
+
+.names A B K	# Somma A + B
+10 1
+01 1
+
+.names K CIN O	# e in seguito somma anche CIN (K = A + B, variabile temporanea)
+10 1
+01 1
+
+.names A B CIN COUT
+11- 1
+1-1 1
+-11 1
+
+.end

@@ -1,0 +1,19 @@
+# Registro a 8 bit
+.model REGISTRO8
+
+.inputs I7 I6 I5 I4 I3 I2 I1 I0	# I[] variabile in entrata (da tenere in memoria)
+.outputs O7 O6 O5 O4 O3 O2 O1 O0	# O[] variabile in uscita
+
+# Formato da 8 registri a 1 bit
+.subckt REGISTRO I=I0 O=O0
+.subckt REGISTRO I=I1 O=O1
+.subckt REGISTRO I=I2 O=O2
+.subckt REGISTRO I=I3 O=O3
+.subckt REGISTRO I=I4 O=O4
+.subckt REGISTRO I=I5 O=O5
+.subckt REGISTRO I=I6 O=O6
+.subckt REGISTRO I=I7 O=O7
+
+.end
+
+.search registro.blif

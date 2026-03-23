@@ -1,0 +1,62 @@
+# Controllore del circuito (FSM)
+.model FSM
+
+.inputs RST START PH7 PH6 PH5 PH4 PH3 PH2 PH1 PH0 PHD7 PHD6 PHD5 PHD4 PHD3 PHD2 PHD1 PHD0
+# RST = reset, START = inizio, PH[] = pH iniziale, PHD[] = pH del Datapath (dato dal DP)
+.outputs FINE_DATA FINE_OPERAZIONE ERRORE_SENSORE VALVOLA_ACIDO VALVOLA_BASICO
+# FINE_DATA = fine per il datapath, FINE_OPERAZIONE = fine generale, ERRORE_SENSORE = quando pH > 14, VALVOLA_ACIDO = apre la valvola della soluzione acida, VALVOLA_BASICO = apre la valvola della soluzione basica
+
+# tabella delle transizioni 
+.start_kiss 
+
+.i 18	# numero input
+.o 5	# numero output
+.p 40	# numero transizioni (frecce)
+.s 5	# numero stati
+.r R	# stato iniziale (di reset)
+
+# Input	- Stato corrente - Stato prossimo - Output
+1----------------- R R 00000
+00---------------- R R 00000
+01111----1-------- R ER 00100
+01111---1--------- R ER 00100
+01111--1---------- R ER 00100
+01111-1----------- R ER 00100
+011111------------ R ER 00100
+011000---1-------- R VA 00010
+011000--1--------- R VA 00010
+011000-1---------- R VA 00010
+0110001----------- R VA 00010
+011001------------ R VA 00010
+01101------------- R VA 00010
+01110------------- R VA 00010
+0111100000-------- R VA 00010
+0100-------------- R VB 00001
+01010------------- R VB 00001
+010110------------ R VB 00001
+010111------------ R FINE 10000
+0110000000-------- R FINE 10000
+0----------------- ER ER 00100
+1----------------- ER R 00000
+0---------1000---1 VA VA 00010
+0---------1000--1- VA VA 00010
+0---------1000-1-- VA VA 00010
+0---------10001--- VA VA 00010
+0---------1001---- VA VA 00010
+0---------101----- VA VA 00010
+0---------11------ VA VA 00010
+0---------10000000 VA FINE 10000
+0---------0------- VA FINE 10000
+1----------------- VA R 00000
+0---------00------ VB VB 00001
+0---------010----- VB VB 00001
+0---------0110---- VB VB 00001
+0---------0111---- VB FINE 10000
+0---------1------- VB FINE 10000
+1----------------- VB R 00000
+0----------------- FINE FINE 11000
+1----------------- FINE R 00000
+
+.end_kiss
+
+.end

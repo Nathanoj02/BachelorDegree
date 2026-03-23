@@ -1,0 +1,152 @@
+.model FSM
+.inputs RST START PH7 PH6 PH5 PH4 PH3 PH2 PH1 PH0 PHD7 PHD6 PHD5 PHD4 PHD3 \
+PHD2 PHD1 PHD0
+.outputs FINE_DATA FINE_OPERAZIONE ERRORE_SENSORE VALVOLA_ACIDO VALVOLA_BASICO
+.latch    [5] LatchOut_v18   1
+.latch    [6] LatchOut_v19   1
+.latch    [7] LatchOut_v20   0
+.start_kiss
+.i 18
+.o 5
+.p 40
+.s 5
+.r R
+1----------------- R R 00000
+00---------------- R R 00000
+01111----1-------- R ER 00100
+01111---1--------- R ER 00100
+01111--1---------- R ER 00100
+01111-1----------- R ER 00100
+011111------------ R ER 00100
+011000---1-------- R VA 00010
+011000--1--------- R VA 00010
+011000-1---------- R VA 00010
+0110001----------- R VA 00010
+011001------------ R VA 00010
+01101------------- R VA 00010
+01110------------- R VA 00010
+0111100000-------- R VA 00010
+0100-------------- R VB 00001
+01010------------- R VB 00001
+010110------------ R VB 00001
+010111------------ R FINE 10000
+0110000000-------- R FINE 10000
+0----------------- ER ER 00100
+1----------------- ER R 00000
+0---------1000---1 VA VA 00010
+0---------1000--1- VA VA 00010
+0---------1000-1-- VA VA 00010
+0---------10001--- VA VA 00010
+0---------1001---- VA VA 00010
+0---------101----- VA VA 00010
+0---------11------ VA VA 00010
+0---------10000000 VA FINE 10000
+0---------0------- VA FINE 10000
+1----------------- VA R 00000
+0---------00------ VB VB 00001
+0---------010----- VB VB 00001
+0---------0110---- VB VB 00001
+0---------0111---- VB FINE 10000
+0---------1------- VB FINE 10000
+1----------------- VB R 00000
+0----------------- FINE FINE 11000
+1----------------- FINE R 00000
+.end_kiss
+.latch_order LatchOut_v18 LatchOut_v19 LatchOut_v20
+.code R 110
+.code ER 010
+.code VA 011
+.code VB 001
+.code FINE 111
+.names VALVOLA_ACIDO VALVOLA_BASICO [7] FINE_DATA
+001 1
+.names RST LatchOut_v18 LatchOut_v20 FINE_OPERAZIONE
+011 1
+.names RST LatchOut_v18 LatchOut_v20 [639] [640] [644] ERRORE_SENSORE
+000--- 1
+0--101 1
+.names PHD6 PHD5 PHD4 PHD3 PHD2 PHD1 PHD0 [7] [639] [655] [660] VALVOLA_ACIDO
+1--------1- 1
+-1-------1- 1
+--1------1- 1
+---1-----1- 1
+----1----1- 1
+-----1---1- 1
+------1--1- 1
+-------11-1 1
+.names RST PH7 PHD7 LatchOut_v18 LatchOut_v19 [638] [656] [658] VALVOLA_BASICO
+0-0-0--1 1
+00-1-11- 1
+.names RST START FINE_DATA LatchOut_v18 [5]
+1--- 1
+--1- 1
+-0-1 1
+.names VALVOLA_BASICO [6]
+0 1
+.names RST START ERRORE_SENSORE LatchOut_v20 [7]
+0--1 1
+010- 1
+.names START LatchOut_v20 [638]
+10 1
+.names PH7 [638] [639]
+11 1
+.names PH6 PH5 [640]
+0- 1
+-0 1
+.names PH4 PH3 PH2 PH1 PH0 [644]
+1---- 1
+-1--- 1
+--1-- 1
+---1- 1
+----1 1
+.names LatchOut_v18 [7] [653]
+01 1
+.names PHD7 [653] [654]
+11 1
+.names LatchOut_v19 [654] [655]
+11 1
+.names PH4 [640] [656]
+0- 1
+-1 1
+.names PHD6 PHD5 [657]
+0- 1
+-0 1
+.names PHD4 [657] [658]
+0- 1
+-1 1
+.names PH6 PH5 [659]
+1- 1
+-1 1
+.names [644] [659] [660]
+1- 1
+-1 1
+.exdc 
+.inputs RST START PH7 PH6 PH5 PH4 PH3 PH2 PH1 PH0 PHD7 PHD6 PHD5 PHD4 PHD3 \
+PHD2 PHD1 PHD0 LatchOut_v18 LatchOut_v19 LatchOut_v20
+.outputs [5] [6] [7] FINE_DATA FINE_OPERAZIONE ERRORE_SENSORE VALVOLA_ACIDO \
+VALVOLA_BASICO
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 [5]
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 [6]
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 [7]
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 FINE_DATA
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 FINE_OPERAZIONE
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 ERRORE_SENSORE
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 VALVOLA_ACIDO
+10- 1
+-00 1
+.names LatchOut_v18 LatchOut_v19 LatchOut_v20 VALVOLA_BASICO
+10- 1
+-00 1
+.end

@@ -1,0 +1,8 @@
+# Costante 0 a 1 bit
+.model ZERO
+
+.outputs uscita
+
+.names uscita
+
+.end

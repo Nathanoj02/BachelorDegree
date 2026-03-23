@@ -1,0 +1,58 @@
+# De-multiplexer a 2 uscite a 8 bit
+.model DEMUX2U8
+
+.inputs I7 I6 I5 I4 I3 I2 I1 I0 S	# I[] ingresso, S bit di "scelta"
+.outputs X7 X6 X5 X4 X3 X2 X1 X0 Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0	# X[], Y[] sono le 2 uscite
+
+# Se S = 1 faccio passare X, al contrario Y
+# Eseguo l'operazione per tutti i bit 
+
+.names S I0 X0
+11 1
+
+.names S I1 X1
+11 1
+
+.names S I2 X2
+11 1
+
+.names S I3 X3
+11 1
+
+.names S I4 X4
+11 1
+
+.names S I5 X5
+11 1
+
+.names S I6 X6
+11 1
+
+.names S I7 X7
+11 1
+
+.names S I0 Y0
+01 1
+
+.names S I1 Y1
+01 1
+
+.names S I2 Y2
+01 1
+
+.names S I3 Y3
+01 1
+
+.names S I4 Y4
+01 1
+
+.names S I5 Y5
+01 1
+
+.names S I6 Y6
+01 1
+
+.names S I7 Y7
+01 1
+
+.end

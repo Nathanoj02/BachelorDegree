@@ -1,0 +1,21 @@
+# Sottrattore a 1 bit
+.model SOTTRATTORE
+
+.inputs A B BIN	# A, B sono 2 numeri, BIN è il bit prestato
+.outputs O BOUT	# O è il risultato, BOUT è il bit preso in prestito
+
+# Esegue l'operazione A - B
+
+.names A B BIN O
+001 1
+010 1
+100 1
+111 1
+
+.names A B BIN BOUT
+001 1
+010 1
+011 1
+111 1
+
+.end
